@@ -14,6 +14,7 @@
 		9CFD41221C6A68B70047AAFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFD41201C6A68B70047AAFB /* LaunchScreen.storyboard */; };
 		9CFD412D1C6A68B70047AAFB /* LocationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD412C1C6A68B70047AAFB /* LocationAppTests.swift */; };
 		9CFD41381C6A68B70047AAFB /* LocationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFD41371C6A68B70047AAFB /* LocationAppUITests.swift */; };
+		9CFD41461C6A6E090047AAFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFD41451C6A6E090047AAFB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9CFD41331C6A68B70047AAFB /* LocationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFD41371C6A68B70047AAFB /* LocationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAppUITests.swift; sourceTree = "<group>"; };
 		9CFD41391C6A68B70047AAFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CFD41451C6A6E090047AAFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFD41461C6A6E090047AAFB /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		9CFD410B1C6A68B70047AAFB = {
 			isa = PBXGroup;
 			children = (
+				9CFD41451C6A6E090047AAFB /* CoreLocation.framework */,
 				9CFD41161C6A68B70047AAFB /* LocationApp */,
 				9CFD412B1C6A68B70047AAFB /* LocationAppTests */,
 				9CFD41361C6A68B70047AAFB /* LocationAppUITests */,
