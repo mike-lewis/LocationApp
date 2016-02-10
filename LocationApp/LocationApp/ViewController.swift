@@ -11,6 +11,9 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var sw: UITextView!
+    @IBOutlet weak var lon: UITextView!
+    @IBOutlet weak var lat: UITextView!
     @IBOutlet weak var CurrentLat: UITextView!
     @IBOutlet weak var CurrentLon: UITextView!
     @IBOutlet weak var DistanceToScience: UITextView!
@@ -19,13 +22,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var scienceWorld: CLLocation!
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         scienceWorld = CLLocation(latitude: 49.2733, longitude: -123.1038)
-        super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -39,16 +42,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     {
         let latestLocation: CLLocation = locationManager.location!
         
-        CurrentLat.text = String(format: "%.4f",
+        lat.text = String(format: "%.4f",
             latestLocation.coordinate.latitude)
-        CurrentLon.text = String(format: "%.4f",
+        lon.text = String(format: "%.4f",
             latestLocation.coordinate.longitude)
 
         
         let distanceBetween: CLLocationDistance =
-        latestLocation.distanceFromLocation(scienceWorld)
+        latestLocation.distanceFromLocation(scienceWorld) / 1000
         
-        DistanceToScience.text = String(format: "%.2f", distanceBetween)
+        sw.text = String(format: "%.2f", distanceBetween)
     }
 
     func locationManager(manager: CLLocationManager,
